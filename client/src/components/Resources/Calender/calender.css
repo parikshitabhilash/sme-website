@@ -1,0 +1,16 @@
+.calender-heading-bg {
+  background: url("./calender.svg") no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 80vh;
+}
+.calender img{
+  width: 60vw;
+  height:auto;
+}
+@media only screen and (max-width: 767px){
+  .calender img{
+    width: 100vw;
+    height:auto;
+  }
+}

@@ -1,0 +1,238 @@
+.r-title {
+  margin-top: var(--rTitleMarginTop, 0) !important;
+  margin-bottom: var(--rTitleMarginBottom, 0) !important;
+}
+
+.tcard__content p:not([class]) {
+  line-height: var(--cssTypographyLineHeight, 1.78);
+  margin-top: var(--cssTypographyBasicMargin, 1em);
+  margin-bottom: 0;
+}
+
+.tcard__content p:not([class]):first-child {
+  margin-top: 0;
+}
+
+/*
+  text component
+  */
+
+.text {
+  display: var(--textDisplay, inline-flex);
+  font-size: var(--textFontSize, 1rem);
+}
+
+/*
+  time component
+  */
+
+/*
+  core styles
+  */
+
+.time {
+  display: var(--timeDisplay, inline-flex);
+}
+
+/*
+  extensions
+  */
+
+.time__month {
+  margin-left: var(--timelineMounthMarginLeft, 0.25em);
+}
+
+/*
+  skin
+  */
+
+.time {
+  padding: var(--timePadding, 0.25rem 1.25rem 0.25rem);
+  background-color: var(--timeBackgroundColor, #f0f0f0);
+
+  font-size: var(--timeFontSize, 0.75rem);
+  font-weight: var(--timeFontWeight, 700);
+  text-transform: var(--timeTextTransform, uppercase);
+  color: var(--timeColor, currentColor);
+}
+
+/*
+  tcard component
+  */
+
+/*
+  core styles
+  */
+
+.tcard {
+  padding: var(--timelineCardPadding, 1.5rem 1.5rem 1.25rem);
+}
+
+.tcard__content {
+  margin-top: var(--cardContentMarginTop, 0.5rem);
+}
+
+/*
+  skin
+  */
+
+.tcard {
+  border-radius: var(--timelineCardBorderRadius, 2px);
+  box-shadow: var(
+    --timelineCardBoxShadow,
+    0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 1px 2px 0 rgba(0, 0, 0, 0.24)
+  );
+  background-color: var(--timelineCardBackgroundColor, #fff);
+}
+
+/*
+  extensions
+  */
+
+.tcard__title {
+  --rTitleMarginTop: var(--cardTitleMarginTop, 1rem);
+  font-size: var(--cardTitleFontSize, 1.25rem);
+}
+
+/*
+  =====
+  CORE STYLES
+  =====
+  */
+
+.timeline {
+  display: var(--timelineDisplay, grid);
+  grid-row-gap: var(--timelineGroupsGap, 2rem);
+}
+
+/*
+  1. If timeline__year isn't displaed the gap between it and timeline__cards isn't displayed too
+  */
+
+.timeline__year {
+  margin-bottom: 1.25rem; /* 1 */
+}
+
+.timeline__cards {
+  display: var(--timeloneCardsDisplay, grid);
+  grid-row-gap: var(--timeloneCardsGap, 1.5rem);
+}
+
+/*
+  =====
+  SKIN
+  =====
+  */
+
+.timeline {
+  --uiTimelineMainColor: var(--timelineMainColor, #222);
+  --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
+
+  border-left: var(--timelineLineWidth, 3px) solid
+    var(--timelineLineBackgroundColor, var(--uiTimelineMainColor));
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.timeline__year {
+  --timePadding: var(--timelineYearPadding, 0.5rem 1.5rem);
+  --timeColor: var(--uiTimelineSecondaryColor);
+  --timeBackgroundColor: var(--uiTimelineMainColor);
+  --timeFontWeight: var(--timelineYearFontWeight, 400);
+}
+
+.timeline__card {
+  position: relative;
+}
+
+/*
+  1. Stoping cut box shadow
+  */
+
+.timeline__cards {
+  overflow: hidden;
+  padding-top: 0.25rem; /* 1 */
+  padding-bottom: 0.25rem; /* 1 */
+  z-index: 20;
+  font-weight: 350;
+}
+
+.timeline__card::before {
+  content: "";
+  width: 100%;
+  height: var(--timelineCardLineWidth, 2px);
+  background-color: var(
+    --timelineCardLineBackgroundColor,
+    var(--uiTimelineMainColor)
+  );
+
+  position: absolute;
+  top: var(--timelineCardLineTop, 1rem);
+  left: -50%;
+  z-index: -1;
+}
+
+/*
+  =====
+  SETTINGS
+  =====
+  */
+/**/
+.timeline {
+  --timelineMainColor: #4557bb;
+  box-shadow: 2px 2px 2px #5063af;
+  /* animation: fadein 5s ease-in; */
+}
+.timeline:hover {
+  box-shadow: 2px 2px 0.5;
+  animation: mymove 2000s;
+}
+@keyframes mymove {
+  0.05% {
+    box-shadow: 5px 8px 10px #5063af;
+  }
+}
+
+/*
+  =====
+  DEMO
+  =====
+  */
+
+.bodyX {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans,
+    Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  color: #222;
+
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed;
+  z-index: -3;
+}
+
+.tcard__content p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.tcard__content p:last-child {
+  margin-bottom: 0;
+}
+
+.page {
+  width: 60vw;
+  padding: 5rem 2rem 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: top;
+  z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .page {
+    width: 90vw;
+  }
+}

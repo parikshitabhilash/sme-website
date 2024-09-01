@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
+/* font-family: 'Merienda', cursive; */
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000;
+  border-style: solid;
+}
+::-webkit-scrollbar-track:hover {
+  background-color: #000;
+  border: none;
+}
+::-webkit-scrollbar-thumb {
+  background: #1989ca;
+  border-radius: 5px;
+  border-radius: 25px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+.khanan-website {
+  font-family: "Merienda", cursive;
+}
+
+/* custom header and footer */
+.khanan-event-navbar {
+  background: linear-gradient(45deg, #6827b0, #ff0881);
+  transition: all 1s ease 0s;
+}
+.khanan-event-navbar .fixed-top {
+  position: initial;
+}
+
+.khanan-event-navbar .dropdown-menu {
+  background: linear-gradient(45deg, #6827b0, #ff0881);
+}
+
+.khanan-event-footer {
+  background: linear-gradient(45deg, #6827b0, #ff0881);
+}
+
+.modal-dialog,
+.modal-content {
+  /* 80% of window height */
+  height: 80%;
+}
+.modal-body {
+  /* 100% = dialog height, 120px = header + footer */
+  padding: 0 !important;
+}
+
+/* khanan-header.js*/
+.khanan-header {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+}
+
+.khanan-header img {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  margin-top: 23vh;
+}
+
+.k-count {
+  position: absolute;
+  left: 20;
+  top: 91%;
+}
+.k-count span {
+  color: #fff;
+  font-size: 3.5vh;
+}
+
+.custom-button-khanan {
+  font-family: "Libre Baskerville", serif;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 1);
+  font-size: 1.25rem;
+  font-weight: 500;
+  height: 10%;
+  position: absolute;
+  left: 15;
+  top: 78%;
+}
+.custom-button-khanan:hover {
+  color: rgba(0, 0, 0, 1) !important;
+}
+.custom-button-khanan::after {
+  background-color: #fff;
+}
+
+.khanan-header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to bottom, #6827b0, #ff0881);
+  backface-visibility: hidden;
+}
+
+/* for KhANAN-CONTENT */
+.k-content {
+  background: linear-gradient(45deg, #ff0881, #6827b0);
+  width: 60vw;
+  color: #fff;
+  font-size: 1.3rem;
+  margin-top: 5vh;
+  margin-left: 38vw;
+  border-radius: 20px 0 0 20px;
+  height: fit-content;
+}
+.k-content-text {
+  margin-left: 15px !important;
+}
+
+/* for Pre Event */
+.p-events {
+  margin-left: 12.5vw;
+  margin-top: 10vh;
+  width: 92%;
+  transition: all 0.4s;
+}
+.p-events:hover {
+  width: 95%;
+  opacity: 0.7;
+  border-color: #ff0881;
+  border-style: solid;
+}
+
+.main-content .p-nav {
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  top: 40%;
+}
+
+.main-content .p-nav .owl-prev,
+.main-content .p-nav .owl-next {
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  color: inherit;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  border: none;
+  z-index: 100;
+}
+.main-content .p-nav .owl-prev {
+  left: 5%;
+}
+.main-content .p-nav .owl-next {
+  right: 5%;
+}
+.main-content .p-nav .owl-prev span,
+.main-content .p-nav .owl-next span {
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+}
+.main-content .p-nav .owl-prev span {
+  left: 40%;
+  top: 37%;
+  border-bottom: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+.main-content .p-nav .owl-next span {
+  right: 40%;
+  top: 37%;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+
+/* For khanan kcards*/
+.kcard.card {
+  background-image: linear-gradient(45deg, #ff0881, #6827b0);
+  border-radius: 0.5rem;
+  padding-bottom: 1rem;
+  background-clip: text;
+  color: transparent;
+  margin-top: 12vh;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+
+a.k-card-link:hover {
+  text-decoration: none;
+}
+
+.kcard.card img {
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-height: max(10rem, 30vh);
+  aspect-ratio: 4/3;
+  transition: transform 1s;
+}
+.kcard.card img:hover {
+  transform: scale(1.2);
+}
+
+.kcard.card img ~ * {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.kcard.card > :last-child {
+  margin-bottom: 0;
+}
+/* For Campus Amb*/
+.campus {
+  background: linear-gradient(45deg, #ff0881, #6827b0);
+  width: 60vw;
+  color: #fff;
+  font-size: 1.3rem;
+  margin-top: 5vh;
+  margin-right: 40vw;
+  border-radius: 0 20px 20px 0;
+  height: fit-content;
+  position: relative;
+}
+.campus-text {
+  margin-left: 50px !important;
+  position: relative;
+  padding-bottom: 5rem !important;
+}
+.custom-button-campus {
+  font-family: "Brush Script MT", "Brush Script Std", cursive;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 1);
+  font-size: 1.25rem;
+  font-weight: 500;
+  position: absolute !important;
+  right: 15px;
+  bottom: 15px;
+}
+.custom-button-campus:hover {
+  color: rgba(0, 0, 0, 1) !important;
+}
+.custom-button-campus::after {
+  background-color: #fff;
+}
+
+/* For speaker.js*/
+.k-sub-heading {
+  background-image: linear-gradient(45deg, #ff0881, #6827b0);
+  padding-bottom: 1rem;
+  background-clip: text;
+  color: transparent;
+  margin-top: 8vh;
+  overflow: hidden;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+/* For event pages */
+.events-page-khanan{
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+.events-page-khanan h1 {
+  background-image: linear-gradient(45deg, #ff0881, #6827b0);
+  background-clip: text;
+  color: transparent;
+}
+.events-page-khanan h1::after {
+  content: none;
+}
+.events-page-khanan .content-bg {
+  background: linear-gradient(45deg, #ff0881, #6827b0);
+  color: #fff;
+  font-size: 1.3rem;
+  border-radius: 20px;
+  height: fit-content;
+  position: relative;
+}
+.events-page-khanan .event-back-btn {
+  background: linear-gradient(45deg, #ff0881, #6827b0);
+  background-clip: text;
+  color: transparent;
+  font-size: 1.5rem;
+}
+
+/* Custom Slider */
+#scrollbar-wrapper {
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scrollbar {
+  height: 800vh;
+  width: 30px;
+  background: #f5f5f5;
+  overflow-y: scroll;
+  margin: 25px;
+}
+
+.force-overflow {
+  min-height: 450px;
+}
+
+#style-1::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+#style-1::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+#style-1::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+/* For Ksponser */
+.Ksponser-logo {
+  width: 16vw;
+  z-index: 100;
+}
+
+.Ksponser-logo-s {
+  width: 16vw;
+  z-index: 100;
+}
+.Ksponser-logo-n {
+  width: 10vw;
+  z-index: 100;
+}
+.k-sponsor-1 {
+  color: #d4af37;
+}
+.k-sponsor-2 {
+  color: #c0c0c0;
+}
+.k-sponsor-3 {
+  color: #d3d6d8;
+}
+.k-sponsor-4 {
+  color: #ed851a;
+}
+.Clickable {
+  z-index: 100;
+}
+
+/* for media query */
+@media only screen and (max-width: 576px) {
+  .k-content {
+    width: 90vw;
+    margin-left: 10vw;
+  }
+  .campus {
+    width: 90vw;
+    margin-right: 10vw;
+  }
+  .Ksponser-logo {
+    width: 40vw;
+  }
+  .Ksponser-logo-s {
+    width: 40vw;
+    z-index: 100;
+  }
+  .Ksponser-logo-n {
+    width: 40vw;
+    z-index: 100;
+  }
+}

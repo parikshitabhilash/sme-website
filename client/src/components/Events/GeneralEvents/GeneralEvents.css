@@ -1,0 +1,61 @@
+.ge-heading-bg {
+  background: url("./images/general_events.svg") no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 80vh;
+}
+.EventBox {
+  width: 200px;
+  height: 250px;
+}
+.EventBox img {
+  width: 100%;
+  height: auto;
+
+  margin-top: 2px;
+}
+.ge-card {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  height: auto;
+  width: 450px;
+  object-fit: cover;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin: auto;
+}
+.ge-card:hover {
+  box-shadow: 1px 1px #8899dd, 2px 2px #8899dd, 3px 3px #8899dd;
+  -webkit-transform: translateY(-3px);
+  transform: translatey(-3px);
+}
+.ge-image {
+  object-fit: fill;
+}
+.ge-card {
+  padding: 5px;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #081b66, #8899dd);
+  border-radius: 20px;
+}
+/* for events page */
+.events-page-image {
+  width: auto;
+  height: 60vh;
+  z-index: 4;
+}
+@media screen and (max-width: 767px) {
+  .events-page-image {
+    width: 60vw;
+    height: auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  .events-page-image {
+    width: 80vw;
+    height: auto;
+  }
+  .ge-card.card {
+    width: 90vw;
+  }
+}

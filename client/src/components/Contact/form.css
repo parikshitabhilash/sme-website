@@ -1,0 +1,15 @@
+.btn-primary {
+  background-color: #374785 !important;
+  border-color: #374785 !important;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #24305e !important;
+  border-color: #24305e !important;
+}
+
+.form-input-errors {
+  color: red;
+  font-size: 0.8rem;
+}
